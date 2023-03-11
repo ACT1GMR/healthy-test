@@ -1,17 +1,13 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore } from '@reduxjs/toolkit';
+import charactersReducer from '../features/characters/charactersSlice';
+import favouritesSlice from '../features/favourites/favouritesSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    characters: charactersReducer,
+    favourites: favouritesSlice,
   },
 });
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
-export type AppThunk<ReturnType = void> = ThunkAction<
-  ReturnType,
-  RootState,
-  unknown,
-  Action<string>
->;

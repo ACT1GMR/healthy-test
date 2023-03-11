@@ -1,0 +1,1 @@
+export const MORTY_FAV_LIST = "MORTY_FAV_LIST";

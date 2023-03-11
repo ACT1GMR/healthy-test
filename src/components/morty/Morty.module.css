@@ -1,0 +1,55 @@
+.Morty {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.Morty__Image {
+    border-radius: 25px;
+    height: 300px;
+    width: 300px;
+    background-color: var(--secondary);
+}
+
+.Morty__Name {
+    font-weight: bold;
+    margin-top: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+    white-space: nowrap;
+    height: 22px;
+}
+
+.Morty__Button {
+    display: block;
+    background-color: #2196f3;
+    outline: none;
+    padding: 5px;
+    margin: 0;
+    border: none;
+    border-radius: 3px;
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 85px);
+    width: 170px;
+    font-weight: bold;
+    font-size: var(--fontSizeSm);
+    color: var(--colorText);
+    height: 40px;
+    opacity: 0;
+    transition: opacity .1s ease-in-out .2s;
+    transform: translateY(1000);
+}
+
+.Morty:hover .Morty__Button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Morty__Button--red {
+    background-color: #da2b2b;
+}
