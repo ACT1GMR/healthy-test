@@ -1,9 +1,0 @@
-.MortyList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.MortyList--ColumnDirection {
-    flex-direction: column;
-}
